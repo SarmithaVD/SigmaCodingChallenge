@@ -43,3 +43,12 @@ Output
     Buy Indices:  [6, 8, 12, 16, 21, 28, 30, 41, 50, 52, 59, 61, 69, 79, 85, 88, 94, 100, 103, 108, 110, 113, 117, 120, 123, 133, 142, 160, 164, 177, 187, 191, 207, 209, 212, 216, 218, 232, 234, 238]
 
 Further Steps
+Example: Making a decision based on transition probabilities
+    
+    if previous_state == 'Flat':    
+    
+        prob_flat_to_bull = transition_probabilities['Flat']['Bull'] # Check the probability of transitioning from Flat to Bull
+        
+        if prob_flat_to_bull > 0.5: # Example criterion for making a buy decision, and this threshold is arbitrary and should be optimized
+        
+        print("High probability of transitioning from Flat to Bull. Consider placing a buy order.")
